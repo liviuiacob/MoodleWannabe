@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+
+<html>
+    {% block content %}
+	<style type="text/css">
+		.my_content_container a {
+    		border-bottom: 1px solid #777777;
+    		border-left: 1px solid #000000;
+    		border-right: 1px solid #333333;
+    		border-top: 1px solid #000000;
+    		color: #000000;
+    		display: block;
+    		height: 2.5em;
+    		padding: 0 1em;
+    		width: 10em;
+    		text-decoration: none;
+		}
+	</style>
+
+    <body>
+        <div id="content" name="content" class="main">
+			<div class="row justify-content-center">
+				<p>Username: {{profile.username}}</p>
+				<hr class="mt-0 mb-4">
+			</div>
+			<div class="row justify-content-center">
+				<p>First name: {{profile.first_name}}</p>
+				<hr class="mt-0 mb-4">
+			</div>
+			<div class="row justify-content-center">
+				<p>Last name: {{profile.last_name}}</p>
+				<hr class="mt-0 mb-4">
+			</div>
+			<div class="row justify-content-center">
+				<p>Email: {{profile.email}}</p>
+				<hr class="mt-0 mb-4">
+			</div>
+    			<button type="submit" class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px; background-color: orange"><a href="/changePassword">Change Password</a></button>
+			<br>
+    			<button type="submit" class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px; background-color: orange"><a href="/changeEmail">Change Email</a></button>
+		</div>
+    </body>
+    {% endblock content %}
+</html>

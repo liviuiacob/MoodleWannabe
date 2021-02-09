@@ -1,0 +1,26 @@
+pieton1 | pieton2 | pieton3 | pieton4.
+nuPietoni1 | nuPietoni2 | nuPietoni3 | nuPietoni4.
+
+semP1Verde & -nuPietoni1-> pieton1.
+semP1Rosu  |  nuPietoni1->-pieton1.
+
+semP2Verde & -nuPietoni2-> pieton2.
+semP2Rosu  |  nuPietoni2->-pieton2.
+
+semP3Verde & -nuPietoni3-> pieton3.
+semP3Rosu  |  nuPietoni3->-pieton3.
+
+semP4Verde & -nuPietoni4-> pieton4.
+semP4Rosu  |  nuPietoni4->-pieton4.
+
+%masini: masina11- masina care merge inainte-dreapta
+%        masina12- masina care merge stanga
+
+masina11I | masina11D.
+
+sem11Verde-> masina11I.
+sem11Rosu ->-masina11I.
+
+sem11Verde & -pieton3-> masina11D.%la verde reactioneaza bine 
+sem11Verde &  pieton3->-masina11D.
+sem11Rosu            ->-masina11D. %continua ideea ca e buna
